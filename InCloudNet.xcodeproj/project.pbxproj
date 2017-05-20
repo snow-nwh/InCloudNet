@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		246E15061ECFEE7800E733C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E15051ECFEE7800E733C2 /* main.m */; };
+		246E15091ECFEE7800E733C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E15081ECFEE7800E733C2 /* AppDelegate.m */; };
+		246E150C1ECFEE7800E733C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E150B1ECFEE7800E733C2 /* ViewController.m */; };
+		246E150F1ECFEE7800E733C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246E150D1ECFEE7800E733C2 /* Main.storyboard */; };
+		246E15111ECFEE7800E733C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246E15101ECFEE7800E733C2 /* Assets.xcassets */; };
+		246E15141ECFEE7800E733C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246E15121ECFEE7800E733C2 /* LaunchScreen.storyboard */; };
+		246E151F1ECFEE7800E733C2 /* InCloudNetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E151E1ECFEE7800E733C2 /* InCloudNetTests.m */; };
+		246E152A1ECFEE7800E733C2 /* InCloudNetUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E15291ECFEE7800E733C2 /* InCloudNetUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		246E151B1ECFEE7800E733C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 246E14F91ECFEE7800E733C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 246E15001ECFEE7800E733C2;
+			remoteInfo = InCloudNet;
+		};
+		246E15261ECFEE7800E733C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 246E14F91ECFEE7800E733C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 246E15001ECFEE7800E733C2;
+			remoteInfo = InCloudNet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		246E15011ECFEE7800E733C2 /* InCloudNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InCloudNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		246E15051ECFEE7800E733C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		246E15071ECFEE7800E733C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		246E15081ECFEE7800E733C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		246E150A1ECFEE7800E733C2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		246E150B1ECFEE7800E733C2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		246E150E1ECFEE7800E733C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		246E15101ECFEE7800E733C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		246E15131ECFEE7800E733C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		246E15151ECFEE7800E733C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		246E151A1ECFEE7800E733C2 /* InCloudNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InCloudNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		246E151E1ECFEE7800E733C2 /* InCloudNetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InCloudNetTests.m; sourceTree = "<group>"; };
+		246E15201ECFEE7800E733C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		246E15251ECFEE7800E733C2 /* InCloudNetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InCloudNetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		246E15291ECFEE7800E733C2 /* InCloudNetUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InCloudNetUITests.m; sourceTree = "<group>"; };
+		246E152B1ECFEE7800E733C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		246E14FE1ECFEE7800E733C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		246E15171ECFEE7800E733C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		246E15221ECFEE7800E733C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		246E14F81ECFEE7800E733C2 = {
+			isa = PBXGroup;
+			children = (
+				246E15031ECFEE7800E733C2 /* InCloudNet */,
+				246E151D1ECFEE7800E733C2 /* InCloudNetTests */,
+				246E15281ECFEE7800E733C2 /* InCloudNetUITests */,
+				246E15021ECFEE7800E733C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		246E15021ECFEE7800E733C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				246E15011ECFEE7800E733C2 /* InCloudNet.app */,
+				246E151A1ECFEE7800E733C2 /* InCloudNetTests.xctest */,
+				246E15251ECFEE7800E733C2 /* InCloudNetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		246E15031ECFEE7800E733C2 /* InCloudNet */ = {
+			isa = PBXGroup;
+			children = (
+				246E15071ECFEE7800E733C2 /* AppDelegate.h */,
+				246E15081ECFEE7800E733C2 /* AppDelegate.m */,
+				246E150A1ECFEE7800E733C2 /* ViewController.h */,
+				246E150B1ECFEE7800E733C2 /* ViewController.m */,
+				246E150D1ECFEE7800E733C2 /* Main.storyboard */,
+				246E15101ECFEE7800E733C2 /* Assets.xcassets */,
+				246E15121ECFEE7800E733C2 /* LaunchScreen.storyboard */,
+				246E15151ECFEE7800E733C2 /* Info.plist */,
+				246E15041ECFEE7800E733C2 /* Supporting Files */,
+			);
+			path = InCloudNet;
+			sourceTree = "<group>";
+		};
+		246E15041ECFEE7800E733C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				246E15051ECFEE7800E733C2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		246E151D1ECFEE7800E733C2 /* InCloudNetTests */ = {
+			isa = PBXGroup;
+			children = (
+				246E151E1ECFEE7800E733C2 /* InCloudNetTests.m */,
+				246E15201ECFEE7800E733C2 /* Info.plist */,
+			);
+			path = InCloudNetTests;
+			sourceTree = "<group>";
+		};
+		246E15281ECFEE7800E733C2 /* InCloudNetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				246E15291ECFEE7800E733C2 /* InCloudNetUITests.m */,
+				246E152B1ECFEE7800E733C2 /* Info.plist */,
+			);
+			path = InCloudNetUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		246E15001ECFEE7800E733C2 /* InCloudNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 246E152E1ECFEE7800E733C2 /* Build configuration list for PBXNativeTarget "InCloudNet" */;
+			buildPhases = (
+				246E14FD1ECFEE7800E733C2 /* Sources */,
+				246E14FE1ECFEE7800E733C2 /* Frameworks */,
+				246E14FF1ECFEE7800E733C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InCloudNet;
+			productName = InCloudNet;
+			productReference = 246E15011ECFEE7800E733C2 /* InCloudNet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		246E15191ECFEE7800E733C2 /* InCloudNetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 246E15311ECFEE7800E733C2 /* Build configuration list for PBXNativeTarget "InCloudNetTests" */;
+			buildPhases = (
+				246E15161ECFEE7800E733C2 /* Sources */,
+				246E15171ECFEE7800E733C2 /* Frameworks */,
+				246E15181ECFEE7800E733C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				246E151C1ECFEE7800E733C2 /* PBXTargetDependency */,
+			);
+			name = InCloudNetTests;
+			productName = InCloudNetTests;
+			productReference = 246E151A1ECFEE7800E733C2 /* InCloudNetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		246E15241ECFEE7800E733C2 /* InCloudNetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 246E15341ECFEE7800E733C2 /* Build configuration list for PBXNativeTarget "InCloudNetUITests" */;
+			buildPhases = (
+				246E15211ECFEE7800E733C2 /* Sources */,
+				246E15221ECFEE7800E733C2 /* Frameworks */,
+				246E15231ECFEE7800E733C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				246E15271ECFEE7800E733C2 /* PBXTargetDependency */,
+			);
+			name = InCloudNetUITests;
+			productName = InCloudNetUITests;
+			productReference = 246E15251ECFEE7800E733C2 /* InCloudNetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		246E14F91ECFEE7800E733C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = snow_nwh;
+				TargetAttributes = {
+					246E15001ECFEE7800E733C2 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					246E15191ECFEE7800E733C2 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 246E15001ECFEE7800E733C2;
+					};
+					246E15241ECFEE7800E733C2 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 246E15001ECFEE7800E733C2;
+					};
+				};
+			};
+			buildConfigurationList = 246E14FC1ECFEE7800E733C2 /* Build configuration list for PBXProject "InCloudNet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 246E14F81ECFEE7800E733C2;
+			productRefGroup = 246E15021ECFEE7800E733C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				246E15001ECFEE7800E733C2 /* InCloudNet */,
+				246E15191ECFEE7800E733C2 /* InCloudNetTests */,
+				246E15241ECFEE7800E733C2 /* InCloudNetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		246E14FF1ECFEE7800E733C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				246E15141ECFEE7800E733C2 /* LaunchScreen.storyboard in Resources */,
+				246E15111ECFEE7800E733C2 /* Assets.xcassets in Resources */,
+				246E150F1ECFEE7800E733C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		246E15181ECFEE7800E733C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		246E15231ECFEE7800E733C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		246E14FD1ECFEE7800E733C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				246E150C1ECFEE7800E733C2 /* ViewController.m in Sources */,
+				246E15091ECFEE7800E733C2 /* AppDelegate.m in Sources */,
+				246E15061ECFEE7800E733C2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		246E15161ECFEE7800E733C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				246E151F1ECFEE7800E733C2 /* InCloudNetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		246E15211ECFEE7800E733C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				246E152A1ECFEE7800E733C2 /* InCloudNetUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		246E151C1ECFEE7800E733C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 246E15001ECFEE7800E733C2 /* InCloudNet */;
+			targetProxy = 246E151B1ECFEE7800E733C2 /* PBXContainerItemProxy */;
+		};
+		246E15271ECFEE7800E733C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 246E15001ECFEE7800E733C2 /* InCloudNet */;
+			targetProxy = 246E15261ECFEE7800E733C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		246E150D1ECFEE7800E733C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				246E150E1ECFEE7800E733C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		246E15121ECFEE7800E733C2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				246E15131ECFEE7800E733C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		246E152C1ECFEE7800E733C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		246E152D1ECFEE7800E733C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		246E152F1ECFEE7800E733C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InCloudNet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "snow-nwh.InCloudNet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		246E15301ECFEE7800E733C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InCloudNet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "snow-nwh.InCloudNet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		246E15321ECFEE7800E733C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InCloudNetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "snow-nwh.InCloudNetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InCloudNet.app/InCloudNet";
+			};
+			name = Debug;
+		};
+		246E15331ECFEE7800E733C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InCloudNetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "snow-nwh.InCloudNetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InCloudNet.app/InCloudNet";
+			};
+			name = Release;
+		};
+		246E15351ECFEE7800E733C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = InCloudNetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "snow-nwh.InCloudNetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = InCloudNet;
+			};
+			name = Debug;
+		};
+		246E15361ECFEE7800E733C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = InCloudNetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "snow-nwh.InCloudNetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = InCloudNet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		246E14FC1ECFEE7800E733C2 /* Build configuration list for PBXProject "InCloudNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				246E152C1ECFEE7800E733C2 /* Debug */,
+				246E152D1ECFEE7800E733C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		246E152E1ECFEE7800E733C2 /* Build configuration list for PBXNativeTarget "InCloudNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				246E152F1ECFEE7800E733C2 /* Debug */,
+				246E15301ECFEE7800E733C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		246E15311ECFEE7800E733C2 /* Build configuration list for PBXNativeTarget "InCloudNetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				246E15321ECFEE7800E733C2 /* Debug */,
+				246E15331ECFEE7800E733C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		246E15341ECFEE7800E733C2 /* Build configuration list for PBXNativeTarget "InCloudNetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				246E15351ECFEE7800E733C2 /* Debug */,
+				246E15361ECFEE7800E733C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 246E14F91ECFEE7800E733C2 /* Project object */;
+}
