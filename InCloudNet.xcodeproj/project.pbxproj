@@ -70,6 +70,7 @@
 		249BE7DB1EF3E1D000BE291F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BE7C81EF3E1D000BE291F /* UIView+WebCacheOperation.m */; };
 		249BE7DC1EF3E1D000BE291F /* Lis_re.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BE7CB1EF3E1D000BE291F /* Lis_re.m */; };
 		249BE7DF1EF3EE2900BE291F /* BQWaterLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BE7DE1EF3EE2900BE291F /* BQWaterLayout.m */; };
+		249BE7E41EF55F2100BE291F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249BE7E31EF55F2100BE291F /* CoreMotion.framework */; };
 		24A4D5391ED43BA100A05ECC /* CNNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A4D5381ED43BA100A05ECC /* CNNavigationViewController.m */; };
 		24A4D53C1ED43C3D00A05ECC /* FilmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A4D53B1ED43C3D00A05ECC /* FilmDetailViewController.m */; };
 		24A4D53F1ED45B4C00A05ECC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A4D53E1ED45B4C00A05ECC /* AVFoundation.framework */; };
@@ -226,6 +227,7 @@
 		249BE7CB1EF3E1D000BE291F /* Lis_re.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lis_re.m; sourceTree = "<group>"; };
 		249BE7DD1EF3EE2900BE291F /* BQWaterLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWaterLayout.h; sourceTree = "<group>"; };
 		249BE7DE1EF3EE2900BE291F /* BQWaterLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWaterLayout.m; sourceTree = "<group>"; };
+		249BE7E31EF55F2100BE291F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		24A4D5371ED43BA100A05ECC /* CNNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNNavigationViewController.h; sourceTree = "<group>"; };
 		24A4D5381ED43BA100A05ECC /* CNNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNNavigationViewController.m; sourceTree = "<group>"; };
 		24A4D53A1ED43C3D00A05ECC /* FilmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmDetailViewController.h; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249BE7E41EF55F2100BE291F /* CoreMotion.framework in Frameworks */,
 				2432789E1EE3B3490082CCD1 /* QuartzCore.framework in Frameworks */,
 				2432789C1EE3B32C0082CCD1 /* CoreGraphics.framework in Frameworks */,
 				247ECFCA1ED46BED00DD598A /* AVKit.framework in Frameworks */,
@@ -527,6 +530,7 @@
 		24A4D53D1ED45B4C00A05ECC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				249BE7E31EF55F2100BE291F /* CoreMotion.framework */,
 				2432789D1EE3B3490082CCD1 /* QuartzCore.framework */,
 				2432789B1EE3B32C0082CCD1 /* CoreGraphics.framework */,
 				247ECFC91ED46BED00DD598A /* AVKit.framework */,
