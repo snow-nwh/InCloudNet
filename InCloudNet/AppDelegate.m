@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CNTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +18,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    
+    CNTabBarViewController *tabBar = [[CNTabBarViewController alloc]init];
+    
+    [self.window makeKeyAndVisible];
+    self.window.rootViewController = tabBar ;
+    
+    
     return YES;
 }
 
+- (void)setAllowRotation:(NSInteger)allowRotation {
+    _allowRotation = allowRotation;
+    [self application:[UIApplication sharedApplication] supportedInterfaceOrientationsForWindow:self.window];
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    if (_allowRotation == 1) {
+        return UIInterfaceOrientationMaskLandscapeRight;
+    } else {
+        return (UIInterfaceOrientationMaskPortrait);
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
