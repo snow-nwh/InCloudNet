@@ -39,7 +39,6 @@
     
     [self getData];
     
-    
 //    layout.minimumLineSpacing = 5.0f;//纵轴间隔
 //    layout.minimumInteritemSpacing = 5.0f;//横轴间隔
     
@@ -50,6 +49,8 @@
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
 }
+
+
 
 - (BQWaterLayout *)waterLayout {
     if (_waterLayout == nil) {
