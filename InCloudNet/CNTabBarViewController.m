@@ -24,10 +24,10 @@
     // Do any additional setup after loading the view.
     
     ChatViewController *chat = [[ChatViewController alloc]init];
-    chat.tabBarItem.title = @"聊天";
+    chat.tabBarItem.title = @"碰撞";
     
     NewsViewController *news = [[NewsViewController alloc]init];
-    news.tabBarItem.title = @"新闻";
+    news.tabBarItem.title = @"折线";
     
     FilmViewController *film = [[FilmViewController alloc]init];
     film.tabBarItem.title = @"影音";

@@ -21,7 +21,6 @@
     // Do any additional setup after loading the view.
         
     [self creatPointArray];
-//    [self loadWebView];
 }
 - (void)creatPointArray {
     NSMutableArray *array = [NSMutableArray array];
@@ -87,7 +86,7 @@
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];//keyPath直接给position不用.x或.y
         animation.duration = i*0.1f;
         //top
-        animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(point.x, 0)];
+//        animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(point.x, 0)];
         //left
 //        animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0, point.y)];
         //bottom
@@ -111,16 +110,6 @@
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [layer addAnimation:animation forKey:nil];
     
-}
-
-- (void)loadWebView {
-    self.webView = [[UIWebView alloc]initWithFrame:self.view.frame];
-
-    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:request];
-    
-    [self.view addSubview:self.webView];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

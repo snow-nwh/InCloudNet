@@ -10,6 +10,7 @@
 		242C3DE91ED528720047C2E7 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 242C3DE81ED528710047C2E7 /* PlayerView.m */; };
 		2432789C1EE3B32C0082CCD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2432789B1EE3B32C0082CCD1 /* CoreGraphics.framework */; };
 		2432789E1EE3B3490082CCD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2432789D1EE3B3490082CCD1 /* QuartzCore.framework */; };
+		244631DC1F10900E0008F0D3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 244631DB1F10900E0008F0D3 /* README.md */; };
 		246E15061ECFEE7800E733C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E15051ECFEE7800E733C2 /* main.m */; };
 		246E15091ECFEE7800E733C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E15081ECFEE7800E733C2 /* AppDelegate.m */; };
 		246E150C1ECFEE7800E733C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246E150B1ECFEE7800E733C2 /* ViewController.m */; };
@@ -99,6 +100,7 @@
 		242C3DE81ED528710047C2E7 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
 		2432789B1EE3B32C0082CCD1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2432789D1EE3B3490082CCD1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		244631DB1F10900E0008F0D3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		246E15011ECFEE7800E733C2 /* InCloudNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InCloudNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246E15051ECFEE7800E733C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		246E15071ECFEE7800E733C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 		246E15041ECFEE7800E733C2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				244631DB1F10900E0008F0D3 /* README.md */,
 				249BE6FB1EF3D17300BE291F /* AFNetworking.h */,
 				246E15051ECFEE7800E733C2 /* main.m */,
 				246E15711ECFF3B200E733C2 /* CNPrefixHeader.pch */,
@@ -714,6 +717,7 @@
 				249BE7981EF3D8D800BE291F /* AFURLRequestSerialization.m in Sources */,
 				249BE7D71EF3E1D000BE291F /* UIImage+MultiFormat.m in Sources */,
 				249BE7D01EF3E1D000BE291F /* SDWebImageDecoder.m in Sources */,
+				244631DC1F10900E0008F0D3 /* README.md in Sources */,
 				249BE79A1EF3D8D800BE291F /* AFURLSessionManager.m in Sources */,
 				249BE79B1EF3D8D800BE291F /* AFAutoPurgingImageCache.m in Sources */,
 				249BE7991EF3D8D800BE291F /* AFURLResponseSerialization.m in Sources */,
