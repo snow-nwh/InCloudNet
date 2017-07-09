@@ -44,7 +44,6 @@
 }
 
 
-
 - (void)dynamicAnimate {
     _dynamic = [[UIDynamicAnimator alloc]initWithReferenceView:self.view];
     UIGravityBehavior *gravity = [[UIGravityBehavior alloc]initWithItems:self.dataSource];

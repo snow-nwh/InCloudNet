@@ -7,133 +7,104 @@
 //
 
 #import "UserCenterViewController.h"
+#import <CoreMotion/CoreMotion.h>
 
-@interface UserCenterViewController () <UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) UITableView *detailTableView;
-
-@property (nonatomic, strong) UIView *headView;
-@property (nonatomic,strong) NSMutableArray *dataSource;
-@property (nonatomic,strong) NSMutableArray *detailData;
+@interface UserCenterViewController ()
+@property (nonatomic,strong) UIDynamicAnimator *dynamicAnimator;
+@property (nonatomic,strong) UIGravityBehavior *gravity;
+@property (nonatomic,strong) NSTimer *timer;
 
 @end
 
 @implementation UserCenterViewController
-{
-    CGRect _originFrame;
-    CGPoint _originCenter;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    self.headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
-    self.headView.backgroundColor = [UIColor greenColor];
-    _originFrame = self.headView.frame;
-    _originCenter = self.headView.center;
-    
-    self.dataSource = [NSMutableArray arrayWithObjects:@"全部",@"1号线",@"2号线",@"3号线",@"4号线",@"5号线", nil];
-    
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,
-                                                                  0,
-                                                                  self.view.frame.size.width/3,
-                                                                  self.view.frame.size.height)
-                                                 style:UITableViewStylePlain];
-//    self.tableView.tableHeaderView = self.headView;
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    self.tableView.rowHeight = 100;
-    
-    [self.view addSubview:self.tableView];
-    
-    self.detailData = [NSMutableArray arrayWithObjects:@"b",@"c",@"d",@"e",@"f",@"g", nil];
-    
-    self.detailTableView = [[UITableView alloc]initWithFrame:CGRectMake(self.view.frame.size.width/3, 64, self.view.frame.size.width*2/3, self.view.frame.size.height)
-                                                       style:UITableViewStyleGrouped];
-    self.detailTableView.delegate = self;
-    self.detailTableView.dataSource = self;
-    self.detailTableView.rowHeight = 50;
-    self.detailTableView.sectionIndexColor = [UIColor lightGrayColor];
-//    self.detailTableView.sectionIndexBackgroundColor = [UIColor blueColor];
-    self.detailTableView.sectionIndexMinimumDisplayRowCount = 5;
-    
-    [self.view addSubview:self.detailTableView];
+    [self turnTable];
 }
 
-#pragma mark - UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if (tableView == self.tableView) {
-        return 1;
+- (UIDynamicAnimator *)dynamicAnimator {
+    if (!_dynamicAnimator) {
+        _dynamicAnimator = [[UIDynamicAnimator alloc]initWithReferenceView:self.view];
     }
-    return self.detailData.count;
+    return _dynamicAnimator;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (tableView == self.tableView) {
-        return self.dataSource.count;
-    } else {
-        return self.detailData.count;
-    }
+- (void)turnTable {
+    CGPoint center = self.view.center;
+    UIButton *ball = [UIButton buttonWithType:UIButtonTypeCustom];
+    ball.frame = CGRectMake(center.x+110, center.y-20, 40, 40);
+//    ball.center = CGPointMake(center.x, center.y+120);
+    ball.layer.cornerRadius = 20;
+    [ball setBackgroundColor:[UIColor orangeColor]];
+    [self.view addSubview:ball];
+    
+    UIButton *ball2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    ball2.frame = CGRectMake(center.x+140, center.y-20, 40, 40);
+    ball2.layer.cornerRadius = 20;
+    [ball2 setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:ball2];
+    
+    UICollisionBehavior *collision = [[UICollisionBehavior alloc]init];
+    collision.collisionMode = UICollisionBehaviorModeEverything;
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(center.x-100, center.y-100, 200, 200) cornerRadius:100];
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.path = path.CGPath;
+    layer.fillColor = [UIColor blueColor].CGColor;
+    [self.view.layer addSublayer:layer];
+    [collision addBoundaryWithIdentifier:@"table" forPath:path];
+    [collision addItem:ball];
+    [collision addItem:ball2];
+    [self.dynamicAnimator addBehavior:collision];
+    
+    UIAttachmentBehavior *attachment = [[UIAttachmentBehavior alloc]
+                                        initWithItem:ball
+                                        offsetFromCenter:UIOffsetMake(10,10)//(50/sqrt(2), 50/sqrt(2))
+                                        attachedToAnchor:center];
+    
+    UIAttachmentBehavior *attachment2 = [[UIAttachmentBehavior alloc]
+                                        initWithItem:ball2
+                                        offsetFromCenter:UIOffsetMake(20,20)
+                                        attachedToAnchor:center];
+//    attachment.frequency = 10;
+    [self.dynamicAnimator addBehavior:attachment];
+    [self.dynamicAnimator addBehavior:attachment2];
+    
+    self.gravity = [[UIGravityBehavior alloc]init];
+    [self.gravity addItem:ball];
+    [self.gravity addItem:ball2];
+    [self.dynamicAnimator addBehavior:self.gravity];
+    [self.gravity setGravityDirection:CGVectorMake(1, 1)];
+    
+//    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
+//    [self.view addGestureRecognizer:panGesture];
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.5f repeats:YES block:^(NSTimer * _Nonnull timer) {
+        CGVector vec = self.gravity.gravityDirection;
+        if (vec.dx > 0 && vec.dy < 0) {
+            CGVector vector = CGVectorMake(-vec.dx, vec.dy);
+            [self.gravity setGravityDirection:vector];
+        } else if (vec.dx < 0 && vec.dy < 0) {
+            CGVector vector = CGVectorMake(vec.dx, -vec.dy);
+            [self.gravity setGravityDirection:vector];
+        } else if (vec.dx < 0 && vec.dy > 0) {
+            CGVector vector = CGVectorMake(-vec.dx, vec.dy);
+            [self.gravity setGravityDirection:vector];
+        } else if (vec.dx > 0 && vec.dy > 0) {
+            CGVector vector = CGVectorMake(vec.dx, -vec.dy);
+            [self.gravity setGravityDirection:vector];
+        }
+    }];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    if (tableView == self.tableView) {
-        cell.backgroundColor = [UIColor lightTextColor];
-        NSString *string = [self.dataSource objectAtIndex:indexPath.row];
-        cell.textLabel.text = string;
-        
-    } else {
-        NSString *string = [self.detailData objectAtIndex:indexPath.row];
-        cell.textLabel.text = string;
-    }
-    return cell;
+- (void)panAction:(UIPanGestureRecognizer *)gesture {
+    CGPoint point = [gesture translationInView:self.view];
+    NSLog(@"self.view = %@",NSStringFromCGPoint([gesture translationInView:self.view]));
+//    NSLog(@"ball = %@",NSStringFromCGPoint([gesture translationInView:gesture.view]));
+    [self.gravity setGravityDirection:CGVectorMake(point.x/1000, point.y/1000)];
 }
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (tableView == self.tableView) {
-        return nil;
-    }
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 10)];
-    NSString *string = [self.detailData objectAtIndex:section];
-    label.text = string;
-    return label;
-}
-- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    if (tableView == self.tableView) {
-        return nil;
-    } else {
-        return self.detailData;
-    }
-}
-
-#pragma mark - UITableViewDelegate
-
-
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//    CGFloat y = scrollView.contentOffset.y;
-//    NSLog(@"%f",y);
-//    if (y < -63.0f) {
-//        //下拉
-//        _headView.frame = CGRectMake(0,
-//                                     y,
-//                                    _originFrame.size.width*(_originFrame.size.height -y)/_originFrame.size.height,
-//                                    _originFrame.size.height -y);
-//        CGPoint centerNew = CGPointMake(_originCenter.x, _originCenter.y+y/2);
-//        _headView.center = centerNew;
-//        self.navigationController.navigationBar.alpha = 1;
-//        
-//    }
-//    else if(y > 0) {
-//        self.navigationController.navigationBar.alpha = 0;
-//    }
-//    else {
-//        //上拉
-//        self.navigationController.navigationBar.alpha = 64/10/(y+63);
-//    }
-//}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

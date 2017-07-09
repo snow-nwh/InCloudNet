@@ -94,6 +94,9 @@
         animation.toValue = [NSValue valueWithCGPoint:point];
         
         [button.layer addAnimation:animation forKey:nil];
+        
+        [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:button];
     }
     [bezier stroke];
     layer.fillColor = [UIColor clearColor].CGColor;
@@ -110,6 +113,44 @@
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [layer addAnimation:animation forKey:nil];
     
+}
+
+- (void)buttonAction:(UIButton *)button {
+    button.selected = !button.selected;
+    if (!button.selected) {
+        return;
+    }
+    UIButton *displayButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    CGPoint origin = button.center;
+    NSString *xValue = [NSString stringWithFormat:@"%.1f",origin.x];
+    NSString *yValure = [NSString stringWithFormat:@"%.1f",origin.y];
+    NSString *title = [NSString stringWithFormat:@"%@\n%@",xValue,yValure];
+    CGFloat xWidth = [xValue boundingRectWithSize:CGSizeMake(MAXFLOAT, 30)
+                                          options:3
+                                       attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13 ]}
+                                          context:nil].size.width;
+    CGFloat yWidth = [yValure boundingRectWithSize:CGSizeMake(MAXFLOAT, 30)
+                                          options:3
+                                       attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13 ]}
+                                          context:nil].size.width;
+    CGSize size = CGSizeMake(MAX(xWidth, yWidth), 30);
+    CGRect frame;
+    frame.origin = origin;
+    frame.size = size;
+    displayButton.frame = frame;
+    displayButton.layer.borderWidth = 1.0f;
+    displayButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    displayButton.titleLabel.numberOfLines = 2;
+    [displayButton setTitle:title forState:UIControlStateNormal];
+    [displayButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    displayButton.titleLabel.font = [UIFont systemFontOfSize:13];
+    [self.view addSubview:displayButton];
+    
+    [displayButton addTarget:self action:@selector(disappearDisplayButton:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)disappearDisplayButton:(UIButton *)button {
+    [button removeFromSuperview];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

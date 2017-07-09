@@ -39,9 +39,6 @@
     
     [self getData];
     
-//    layout.minimumLineSpacing = 5.0f;//纵轴间隔
-//    layout.minimumInteritemSpacing = 5.0f;//横轴间隔
-    
     self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:self.waterLayout];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     self.collectionView.backgroundColor = [UIColor yellowColor];
@@ -61,14 +58,6 @@
         
         //计算每个item高度方法，必须实现（也可以设计为代理实现）
         __weak typeof(self) weakSelf = self;
-//        [_waterLayout computeIndexCellHeightWithWidthBlock:^CGFloat(NSIndexPath *indexPath, CGFloat width) {
-//                        NSString *imageName = weakSelf.heightArr[indexPath.row];
-//                        UIImage *image = [UIImage imageNamed:imageName];
-//                        CGFloat itemH = image.size.height / image.size.width * width;
-//            return [weakSelf.heightArr[indexPath.row] floatValue];
-//            ImageModel *model = weakSelf.dataSource[indexPath.row];
-//            return [model.thumbHeight floatValue];
-//        }];
         [_waterLayout computeIndexCellSizeWithWidthBlock:^CGSize(NSIndexPath *indexPath) {
             ImageModel *model = weakSelf.dataSource[indexPath.row];
             return CGSizeMake([model.thumbWidth floatValue], [model.thumbHeight floatValue]);
